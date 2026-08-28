@@ -1,0 +1,23 @@
+schema_version: 1
+parameter_order: [omega_m, omega_b, H0, w0, wa, DeltaM]
+parameters:
+  omega_m: {type: uniform, lower: 0.115, upper: 0.185, fiducial: 0.147}
+  omega_b: {type: uniform, lower: 0.0200, upper: 0.0255, fiducial: 0.02237}
+  H0: {type: uniform, lower: 55.0, upper: 85.0, fiducial: 70.0}
+  w0: {type: uniform, lower: -2.0, upper: -0.3, fiducial: -1.0}
+  wa: {type: uniform, lower: -2.0, upper: 1.0, fiducial: 0.0}
+  DeltaM: {type: uniform, lower: -1.0, upper: 1.0, fiducial: 0.0}
+constraints:
+  - name: no_early_dark_energy
+    expression: "w0 + wa < 0"
+    rationale: "keeps CPL dark energy subdominant at early times for the compressed-CMB approximation"
+emulator_domain:
+  omega_m: [0.11, 0.19]
+  omega_b: [0.019, 0.026]
+boundary_tolerance_fraction: 1.0e-5
+optimizer:
+  repeated_minimum_chi2_tolerance: 1.0e-4
+  zero_noise_delta_chi2_tolerance: 1.0e-5
+  n_random_starts_lcdm: 4
+  n_random_starts_cpl: 8
+  seed: 20260725

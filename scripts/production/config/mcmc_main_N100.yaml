@@ -1,0 +1,50 @@
+schema_version: 1
+status: execution_interface_ready_do_not_launch_automatically
+sampler: emcee_affine_invariant
+model: CPL
+mock_file: mocks/joint/pedagogic2_joint_lcdm_N0100.h5
+output_root: chains/main_N100
+case_prefix: N100
+realization_ids: {first: 0, last: 99}
+parameter_order: [omega_m, omega_b, H0, w0, wa, DeltaM]
+priors: priors_joint.yaml
+walkers: 64
+initialization:
+  center: fiducial
+  method: truncated_gaussian_ball
+  fractional_prior_width: 0.005
+  require_unique_finite_walkers: true
+  fiducial:
+    omega_m: 0.147
+    omega_b: 0.02237
+    H0: 70.0
+    w0: -1.0
+    wa: 0.0
+    DeltaM: 0.0
+burn_in_steps: 3000
+production_steps: 20000
+production_targets: [20000, 40000, 50000, 60000, 70000, 80000]
+thin: 1
+diagnostics:
+  integrated_autocorrelation:
+    minimum_chain_length_in_tau: 50
+    maximum_fractional_tau_change: 0.05
+  split_Rhat_max: 1.01
+  effective_sample_size_min_per_parameter: 1000
+  acceptance_fraction_range: [0.15, 0.60]
+rerun_policy:
+  extend_factor: 2
+  maximum_extensions: 5
+  total_production_targets: [20000, 40000, 50000, 60000, 70000, 80000]
+failure_policy: "quarantine realization after 80000 production steps; never silently omit it"
+storage:
+  format: HDF5
+  save_log_probability: true
+  save_component_chi2: true
+  save_derived_parameters: true
+  checkpoint_interval_steps: 250
+restart:
+  resume_incomplete_backend: true
+  protect_completed_converged_backend: true
+  require_overwrite_for_replacement: true
+  verify_case_identity_before_resume: true

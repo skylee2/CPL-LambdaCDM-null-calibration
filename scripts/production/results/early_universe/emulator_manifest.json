@@ -1,0 +1,39 @@
+{
+  "construction_seconds": 0.0006496660007542232,
+  "domain": {
+    "omega_b": [
+      0.019,
+      0.026
+    ],
+    "omega_m": [
+      0.11,
+      0.19
+    ]
+  },
+  "fiducial_prediction": {
+    "r_d": 145.89815058012314,
+    "r_star": 143.36561963580078,
+    "z_drag": 1060.2310602354662,
+    "z_star": 1089.1121673399425
+  },
+  "grid_path": "results/early_universe/class_grid.npz",
+  "grid_sha256": "549676616c72e344b15cd526c4cea791e4639bf3de443c3a5ce78e2a9bede131",
+  "method": "tensor-product cubic RectBivariateSpline",
+  "outputs": [
+    "r_d",
+    "r_star",
+    "z_drag",
+    "z_star"
+  ],
+  "parameters": [
+    "omega_m",
+    "omega_b"
+  ],
+  "predeclared_targets": {
+    "max_relative_error_R": 0.0001,
+    "max_relative_error_l_A": 0.0001,
+    "max_relative_error_r_d": 0.0001,
+    "max_relative_error_r_star": 0.0001
+  },
+  "version": "pedagogic2-rbs-v1"
+}

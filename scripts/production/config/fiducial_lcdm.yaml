@@ -1,0 +1,78 @@
+schema_version: 1
+joint_parameters:
+  omega_m: 0.147
+  omega_b: 0.02237
+  omega_c: 0.12463
+  H0_km_s_Mpc: 70.0
+  w0: -1.0
+  wa: 0.0
+  DeltaM_mag: 0.0
+derived:
+  h: 0.7
+  Omega_m: 0.3
+physics:
+  T_CMB_K: 2.7255
+  N_eff: 3.046
+  neutrino_convention: "three effectively massless species; N_ncdm=0"
+  sum_mnu_eV: 0.0
+  Omega_k: 0.0
+  helium_convention: "CLASS BBN interpolation (YHe=BBN)"
+  recombination_model: "HyRec"
+  dark_energy_model: "CLASS fluid, CLP/CPL equation of state"
+class:
+  package: classy
+  version: "3.3.4"
+  parameters:
+    N_ur: 3.046
+    N_ncdm: 0
+    T_cmb: 2.7255
+    Omega_k: 0.0
+    YHe: BBN
+    recombination: HyRec
+    fluid_equation_of_state: CLP
+    Omega_Lambda: 0.0
+    output: mPk
+    P_k_max_1/Mpc: 1.0
+    z_max_pk: 3.0
+  precision:
+    tol_thermo_integration: 1.0e-5
+emulator:
+  parameters: [omega_m, omega_b]
+  omega_m_range: [0.11, 0.19]
+  omega_b_range: [0.019, 0.026]
+  grid_shape: [11, 11]
+  validation_points: 96
+  validation_seed: 20260724
+  method: "tensor-product cubic RectBivariateSpline"
+  targets:
+    max_relative_error_r_d: 1.0e-4
+    max_relative_error_r_star: 1.0e-4
+    max_relative_error_R: 1.0e-4
+    max_relative_error_l_A: 1.0e-4
+random:
+  default_master_entropy: 2507013802
+  bit_generator: PCG64
+inputs:
+  pantheon_data: "../../../external_data/PantheonPlus/Pantheon+SH0ES.dat"
+  pantheon_covariance: "../../../external_data/PantheonPlus/Pantheon+SH0ES_STAT+SYS.cov"
+  pantheon_mask: "zHD > 0.01"
+  bao_source_read_only: "../../../external_data/DESI_DR2_BAO_observables_and_cov.txt"
+  cmb_source_read_only: "../../../external_data/CMB_distance_priors_Planck2018.txt"
+bao:
+  description: "12-dimensional reconstructed Gaussian DESI-DR2-like likelihood; BGS excluded; zero cross-bin covariance"
+  tracers: [LRG1, LRG2, LRG3+ELG1, ELG2, QSO, LyA]
+  redshift: [0.510, 0.706, 0.934, 1.321, 1.484, 2.330]
+  observable_order_within_bin: [DM_over_rd, DH_over_rd]
+  covariance_blocks:
+    - [[0.02788900, -0.03257752], [-0.03257752, 0.18062500]]
+    - [[0.03132900, -0.02359764], [-0.02359764, 0.10890000]]
+    - [[0.02310400, -0.01220377], [-0.01220377, 0.03724900]]
+    - [[0.10112400, -0.03050065], [-0.03050065, 0.04884100]]
+    - [[0.57760000, -0.19608000], [-0.19608000, 0.26626500]]
+    - [[0.28196100, -0.02311496], [-0.02311496, 0.01020100]]
+cmb:
+  observable_order: [R, l_A, omega_b]
+  covariance:
+    - [1.5989554e-5, 1.7112007e-4, -3.6311179e-7]
+    - [1.7112007e-4, 8.1120845e-3, -4.9479813e-6]
+    - [-3.6311179e-7, -4.9479813e-6, 2.1242182e-8]

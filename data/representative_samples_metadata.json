@@ -1,0 +1,70 @@
+{
+  "parameter_order": [
+    "omega_m",
+    "omega_b",
+    "H0",
+    "w0",
+    "wa",
+    "DeltaM",
+    "Omega_m0"
+  ],
+  "representative_order": [
+    41,
+    80,
+    65,
+    98
+  ],
+  "roles": {
+    "N100-41": "minimum Euclidean norm of six posterior-median pulls",
+    "N100-80": "w0-wa Mahalanobis-squared value closest to ensemble median",
+    "N100-65": "maximum independently optimized likelihood ratio",
+    "N100-98": "maximum absolute posterior-median H0 pull"
+  },
+  "hpd": {
+    "limits": "0.2 and 99.8 percentiles in each dimension, padded by 8% of span",
+    "bins": [
+      100,
+      100
+    ],
+    "gaussian_sigma_grid_bins": 1.15,
+    "levels": [
+      0.682689492137,
+      0.954499736104
+    ],
+    "mass_sort": "descending smoothed density; grid-cell mass"
+  },
+  "origins": {
+    "N100-41": {
+      "backend": "chains/main_N100/N100-41/cpl.h5",
+      "backend_sha256": "f23efc7d72c6621df7fd7c363df06822c65f1ff1ba1e1bf4dbe5987738db54bf",
+      "retained_sample_count": 2560000,
+      "selection": "np.arange(0, N, max(1,N//40000))[:40000]",
+      "stride": 64,
+      "selected_count": 40000
+    },
+    "N100-80": {
+      "backend": "chains/main_N100/N100-80/cpl.h5",
+      "backend_sha256": "3a77a419e91d36127d9840a56c45dbf3b4797f7b67ccab52540c303bcc49e60b",
+      "retained_sample_count": 1280000,
+      "selection": "np.arange(0, N, max(1,N//40000))[:40000]",
+      "stride": 32,
+      "selected_count": 40000
+    },
+    "N100-65": {
+      "backend": "chains/main_N100/N100-65/cpl.h5",
+      "backend_sha256": "2e71768a87c7e2c2b528c700c4333fdc983a057011cca9115c6ac9435dc5d6ad",
+      "retained_sample_count": 3200000,
+      "selection": "np.arange(0, N, max(1,N//40000))[:40000]",
+      "stride": 80,
+      "selected_count": 40000
+    },
+    "N100-98": {
+      "backend": "chains/main_N100/N100-98/cpl.h5",
+      "backend_sha256": "97aa0f53ce1dc6948fff7fbe6b65bae6966770e63ede19e3856ef53aaf8b6b51",
+      "retained_sample_count": 2560000,
+      "selection": "np.arange(0, N, max(1,N//40000))[:40000]",
+      "stride": 64,
+      "selected_count": 40000
+    }
+  }
+}

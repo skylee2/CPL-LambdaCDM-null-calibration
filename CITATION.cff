@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated manuscript and this software record."
+title: "CPL LambdaCDM Null Calibration"
+type: software
+authors:
+  - family-names: Lee
+    given-names: Seokcheon
+repository-code: "https://github.com/skylee2/CPL-LambdaCDM-null-calibration"

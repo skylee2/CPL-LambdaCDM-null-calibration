@@ -1,0 +1,15 @@
+schema_version: 1
+boundary_convention: "All scalar prior intervals are open: lower < value < upper."
+parameters:
+  omega_m: {distribution: uniform, lower: 0.115, upper: 0.185}
+  omega_b: {distribution: uniform, lower: 0.0200, upper: 0.0255}
+  H0: {distribution: uniform, lower: 55.0, upper: 85.0, units: "km s^-1 Mpc^-1"}
+  w0: {distribution: uniform, lower: -2.0, upper: -0.3}
+  wa: {distribution: uniform, lower: -2.0, upper: 1.0}
+  DeltaM: {distribution: uniform, lower: -1.0, upper: 1.0, units: mag}
+physical_condition:
+  expression: "w0 + wa < 0"
+  boundary: open
+  purpose: "keeps CPL dark energy subdominant at early times for the compressed-CMB approximation"
+derived_parameter:
+  Omega_m0: "omega_m / (H0/100)^2, evaluated sample by sample"

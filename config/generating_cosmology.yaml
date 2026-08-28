@@ -1,0 +1,27 @@
+schema_version: 1
+ensemble:
+  realization_count: 100
+  labels: "N100-0 through N100-99"
+model: "spatially flat LambdaCDM nested in CPL"
+parameters:
+  omega_m: 0.147
+  omega_b: 0.02237
+  H0_km_s_Mpc: 70.0
+  w0: -1.0
+  wa: 0.0
+  DeltaM_mag: 0.0
+derived:
+  h: 0.7
+  Omega_m0: 0.3
+early_universe:
+  CLASS_version: "3.3.4"
+  T_CMB_K: 2.7255
+  N_eff: 3.046
+  N_ncdm: 0
+  spatial_curvature: 0.0
+  helium: "BBN-consistent CLASS interpolation"
+  recombination: "HyRec"
+  r_d_Mpc: 145.89814
+  r_star_Mpc: 143.36562
+  z_drag: 1060.23116
+  z_star: 1089.11222
