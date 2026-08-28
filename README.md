@@ -6,7 +6,7 @@ This repository supports the manuscript:
 
 > “Apparent Dynamical-Dark-Energy Exclusions and Weak-Mode Amplification in a Calibrated LambdaCDM Ensemble”
 
-It contains compact realization-level derived products, the final nine artwork PDFs, a deterministic representative posterior subsample, and the production analysis code needed to inspect the reported ensemble calibration. It provides compact realization-level derived products, the final nine artwork PDFs, a deterministic representative posterior subsample, and the production analysis code used to inspect and reproduce the reported ensemble calibration.
+It contains compact realization-level derived products, the final nine artwork PDFs, a deterministic representative posterior subsample, and the production analysis code needed to inspect and reproduce the reported ensemble calibration.
 
 ## Scientific purpose
 
