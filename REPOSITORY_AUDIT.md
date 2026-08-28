@@ -101,7 +101,7 @@ The final pre-initialization audit was rerun on 2026-08-28 after adding only lic
 ## Size audit
 
 - Total files: 67.
-- Exact total payload: `6049786` bytes.
+- Exact total payload: `6050457` bytes.
 - Files larger than 10 MB: none.
 - Files larger than 50 MB: none.
 - GitHub-unsuitable files: none. The largest file is the 5,494,779-byte representative NPZ; Git LFS is not required.
@@ -140,3 +140,16 @@ Largest 20 files (bytes):
 The content is scientifically and privacy-safe for human review. It can be made public after the remaining metadata decisions and final human approval.
 
 **Ready for human review before GitHub push: YES**
+
+## GitHub private-repository upload
+
+- Repository URL: `https://github.com/skylee2/CPL-LambdaCDM-null-calibration`
+- Branch: `main`
+- Initial commit hash: `35b22814aa509f1029f35fd5daeed4aac760d240`
+- Push success: YES
+- Remote/local HEAD match: YES (verified immediately after the initial push)
+- Expected remote contents: VERIFIED (67 tracked files, including the required top-level metadata and directory structure)
+- Remote figure artwork: VERIFIED (nine PDF files)
+- Repository visibility status: PRIVATE (authenticated push succeeded; anonymous repository access returned HTTP 404)
+- Zenodo status: NOT YET CONNECTED
+- Scientific content changed during Phase 2: NO
