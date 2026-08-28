@@ -100,8 +100,8 @@ The final pre-initialization audit was rerun on 2026-08-28 after adding only lic
 
 ## Size audit
 
-- Total files: 67.
-- Exact total payload: `6050457` bytes.
+- Total files: 68.
+- Exact total payload: `6051866` bytes.
 - Files larger than 10 MB: none.
 - Files larger than 50 MB: none.
 - GitHub-unsuitable files: none. The largest file is the 5,494,779-byte representative NPZ; Git LFS is not required.
@@ -153,3 +153,9 @@ The content is scientifically and privacy-safe for human review. It can be made 
 - Repository visibility status: PRIVATE (authenticated push succeeded; anonymous repository access returned HTTP 404)
 - Zenodo status: NOT YET CONNECTED
 - Scientific content changed during Phase 2: NO
+
+## AI-assisted development disclosure
+
+`AI_ASSISTANCE.md` and the corresponding concise README link were added before
+public release. This documentation-only addition changes no scientific data,
+numerical result, production-code behavior, configuration, or figure.

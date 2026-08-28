@@ -81,6 +81,12 @@ Citation metadata is in `CITATION.cff`. A Zenodo identifier will be added after 
 
 DOI: to be assigned
 
+## AI-assisted development
+
+Selected coding, review, documentation, and figure-workflow tasks used
+generative-AI assistance under author verification; see
+[AI_ASSISTANCE.md](AI_ASSISTANCE.md).
+
 ## License
 
 - Code and scripts are released under the [MIT License](LICENSE).
